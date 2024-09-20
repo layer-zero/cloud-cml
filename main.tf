@@ -28,13 +28,15 @@ module "deploy" {
   source = "./modules/deploy"
   cfg    = local.cfg
   extras = local.extras
+  azure_subscription_id = var.azure_subscription_id
+  azure_tenant_id = var.azure_tenant_id
 }
 
 provider "cml2" {
   address        = "https://${module.deploy.public_ip}"
   username       = local.cfg.secrets.app.username
   password       = local.cfg.secrets.app.secret
-  use_cache      = false
+# use_cache      = false
   skip_verify    = true
   dynamic_config = true
 }

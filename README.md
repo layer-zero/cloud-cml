@@ -179,8 +179,8 @@ There's two Terraform variables which can be defined / set to further customize 
 export TF_VAR_access_key="aws-something"
 export TF_VAR_secret_key="aws-somethingelse"
 
-# export TF_VAR_subscription_id="azure-something"
-# export TF_VAR_tenant_id="azure-something-else"
+# export TF_VAR_azure_subscription_id="azure-something"
+# export TF_VAR_azure_tenant_id="azure-something-else"
 
 export TF_VAR_cfg_file="config-custom.yml"
 export TF_VAR_cfg_extra_vars="extras.sh"
